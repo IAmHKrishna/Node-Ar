@@ -1,0 +1,24 @@
+<!-- views/home.handlebars -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR.js with 3D Model</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="/scripts/app.js" defer></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <span>krishna</span>
+  <!-- views/home.handlebars -->
+<a-scene embedded arjs>
+  <a-marker preset="hiro">
+    <a-entity id="model"></a-entity>
+  </a-marker>
+  <a-camera-static />
+</a-scene>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR with Node.js</title>
+  <!-- Load A-Frame and AR.js -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <!-- <script src="https://rawgit.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs>
+    <!-- AR Marker for triggering the 3D model display -->
+    <a-marker preset="hiro">
+      <a-entity
+        gltf-model="#model"
+        scale="0.5 0.5 0.5"    
+        position="0 0 0"
+        >
+      </a-entity>
+    </a-marker>
+    <a-camera-static />
+  </a-scene>
+
+  <!-- Load the 3D model from the server -->
+  <a-assets>
+    <a-asset-item id="model" src="assets/mac-draco.glb"></a-asset-item>
+  </a-assets>
+</body>
+</html>
